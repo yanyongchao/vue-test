@@ -11,7 +11,7 @@ module.exports = {
           staticDir: path.join(__dirname, 'dist'),
           routes: ['/', '/about'], // 需要预渲染的路由
           renderer: new Renderer({
-            headless: false, // 打包渲染时是否显示浏览器窗口，调试时有用
+            // headless: false, // 打包渲染时是否显示浏览器窗口，调试时有用
             renderAfterDocumentEvent: 'render-event' // 等待触发目标时间后，开始预渲染
           })
         })
