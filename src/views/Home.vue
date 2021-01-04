@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="handleClick">按钮</button>
+    <div v-show="show" :key="uniqueKey">
+      box1<input type="checkbox">
+      <br>
+      box2<input type="checkbox">
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      radio: '1',
+      show: true,
+      uniqueKey: 0
+    }
+  },
+  methods: {
+    handleClick () {
+      window.location.href = 'https://juejin.im/timeline'
+    }
   }
 }
 </script>
